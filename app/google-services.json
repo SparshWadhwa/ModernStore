@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "367493126682",
+    "firebase_url": "https://modernstore-9176c.firebaseio.com",
+    "project_id": "modernstore-9176c",
+    "storage_bucket": "modernstore-9176c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367493126682:android:a6c50ea9d824bac0",
+        "android_client_info": {
+          "package_name": "com.sparshwadhwa.modernstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367493126682-loqnc88tol6dg2lnvlivljb2hi0r4brh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sparshwadhwa.modernstore",
+            "certificate_hash": "aecd4d6f0b78ec9bc6b31e323481ae3a13dabc9e"
+          }
+        },
+        {
+          "client_id": "367493126682-00e5elvt5tij75klrb5hsqsqpgb6gv66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIb9fQImqZkZKyneiqLvt-yBCduduEysE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367493126682-00e5elvt5tij75klrb5hsqsqpgb6gv66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sparshwadhwa.modernstore.authentication">
+
+
+    <EditText
+        android:id="@+id/phoneField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:id="@+id/codeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:onClick="requestCode"
+        android:text="send code"
+        android:layout_below="@+id/phoneField"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/codeField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Enter Request Code"
+        android:inputType="number"
+        android:layout_below="@+id/codeBtn"
+        android:layout_alignStart="@+id/phoneField" />
+
+    <Button
+        android:id="@+id/signInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/codeBtn"
+        android:layout_below="@+id/codeField"
+        android:layout_marginTop="24dp"
+        android:onClick="signIn"
+        android:text="sign in" />
+
+</RelativeLayout>

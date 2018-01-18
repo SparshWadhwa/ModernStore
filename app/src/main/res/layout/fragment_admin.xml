@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sparshwadhwa.modernstore.admin">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="54dp"
+        android:text="ADD GENRE" />
+
+    <EditText
+        android:id="@+id/addgenre_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="GENRE"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/genre_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/addgenre_field"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Save" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addgenre_field"
+        android:layout_alignStart="@+id/addgenre_field"
+        android:layout_below="@+id/genre_save"
+        android:layout_marginTop="87dp"
+        android:text="ADD GENRE ITEMS" />
+
+    <EditText
+        android:id="@+id/genre_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/genre_spinner"
+        android:layout_alignStart="@+id/genre_spinner"
+        android:layout_below="@+id/genre_spinner"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="GENRE ITEM"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/genre_item_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/genre_item"
+        android:text="save" />
+
+    <Spinner
+        android:id="@+id/genre_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="11dp" />
+
+    <Spinner
+        android:id="@+id/genre_item_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/genre_item"
+        android:layout_alignLeft="@+id/genre_item"
+        android:layout_alignRight="@+id/genre_item"
+        android:layout_alignStart="@+id/genre_item"
+        android:layout_below="@+id/genre_item" />
+
+    <EditText
+        android:id="@+id/item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/genre_item_weight"
+        android:layout_alignStart="@+id/genre_item_weight"
+        android:layout_below="@+id/genre_item_weight"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="price"
+        android:inputType="textPersonName" />
+
+
+
+</RelativeLayout>
