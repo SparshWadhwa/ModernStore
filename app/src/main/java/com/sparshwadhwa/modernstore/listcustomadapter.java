@@ -20,6 +20,8 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 
+import static com.sparshwadhwa.modernstore.MainActivity.cartTotal;
+
 /**
  * Created by spars on 12-01-2018.
  */
@@ -68,7 +70,7 @@ public class listcustomadapter extends BaseAdapter {
 
     public void remove(int i) {
         valuesItems.remove(i);
-//        notifyItemRemoved(position);
+//        notifyItemRemoved(i);
     }
 
     @Override
@@ -180,9 +182,11 @@ public class listcustomadapter extends BaseAdapter {
                                     Toast.makeText(inf.getContext(),"ENTER AMOUNT",Toast.LENGTH_SHORT).show();
                                 }
                                 else {
-                                    cartDatabaseRef = FirebaseDatabase.getInstance().getReference().child("users").child(userUID).child("cart");
-                                    cartDatabaseRef.push().setValue(itemName+ " " + userInputDialogEditText.getText() +" "+unitForDialogBox+ "$" +priceForDialogBox);
+                                    cartDatabaseRef = FirebaseDatabase.getInstance().getReference().child("users").child(userUID);
+                                    cartDatabaseRef.child("cart").push().setValue(itemName+ "@" + userInputDialogEditText.getText() +"#"+unitForDialogBox+ "$" +priceForDialogBox);
                                     // ToDo get user input here
+                                    Float temp = Float.parseFloat(cartTotal) + Float.parseFloat(userInputDialogEditText.getText().toString())*Float.parseFloat(priceForDialogBox);
+                                    cartDatabaseRef.child("carttotal").setValue(Float.parseFloat(Float.toString(temp)));
                                     Toast.makeText(inf.getContext(),"Added to cart",Toast.LENGTH_SHORT).show();
                                     dialogBox.dismiss();
 

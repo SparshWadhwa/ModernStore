@@ -2,6 +2,7 @@ package com.sparshwadhwa.modernstore;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,11 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference cartFirebaseDatabaseRef;
+    public static String cartTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +42,20 @@ public class MainActivity extends AppCompatActivity {
             loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(loginIntent);
         }
+        else{
+        cartFirebaseDatabaseRef = FirebaseDatabase.getInstance().getReference().child("users").child(mAuth.getCurrentUser().getUid()).child("carttotal");
+        cartFirebaseDatabaseRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                cartTotal = dataSnapshot.getValue().toString();
+            }
 
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+        }
 
     }
 
@@ -52,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_dashboard:
                     mTextMessage.setText(R.string.title_dashboard);
-                    getSupportFragmentManager().beginTransaction().replace(R.id.layout_main,new adim_status()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.layout_main,new cart()).commit();
                     return true;
                 case R.id.navigation_notifications:
                     mTextMessage.setText(R.string.title_notifications);

@@ -1,141 +1,213 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cart_Fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.sparshwadhwa.modernstore.cart">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="Mr. Rakesh Pathak"
-               android:textAllCaps="true"
-               android:textStyle="bold"
-               android:textColor="#000"
-               android:id="@+id/cus_name"
-               android:padding="10dp"
-               android:textSize="20sp"/>
-           <ImageView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:scaleType="fitCenter"
-               android:layout_margin="10dp"
-               android:src="@drawable/edit"
-               android:layout_alignParentEnd="true"
-               android:layout_alignParentRight="true"
-               
-               />
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/address"
-               android:textColor="#000"
-               android:text="B 607 A, Double Storey"
-               android:textStyle="italic"
-               android:padding="10dp"
-               android:layout_below="@+id/cus_name"
-               android:textSize="20sp"/>
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/area"
-               android:padding="10dp"
-               android:layout_below="@+id/address"
-               android:textColor="@color/colorAccent"
-               android:text="brij vihar gaziabad 1110000"/>
-           <View
-               android:layout_width="match_parent"
-               android:layout_height="1dp"
-               android:background="#504d4d"
-               android:layout_margin="4dp"
-               android:layout_below="@+id/area"
-               android:id="@+id/view" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-           <View
-               android:layout_width="100dp"
-               android:layout_height="8dp"
-               android:layout_centerInParent="true"
-               android:layout_below="@+id/area"
-               android:background="@color/colorAccent" />
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textAllCaps="true"
-               android:text="ITEM"
-               android:textColor="#000"
-               android:textStyle="bold"
-               android:id="@+id/item_text"
-               android:layout_below="@+id/view"
-               android:layout_marginLeft="30dp"
-               android:layout_marginBottom="10dp"/>
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textAllCaps="true"
-               android:text="QUantitiy"
-               android:textColor="#000"
-               android:textStyle="bold"
-android:layout_centerInParent="true"
-               android:layout_below="@+id/view"
-               android:layout_marginLeft="30dp"
-               android:layout_marginBottom="10dp"/>
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/payment"
-           android:layout_below="@+id/total_text"
-               android:layout_centerHorizontal="true"
-               android:background="#c23e16"
-               android:padding="20dp"
-               android:text="Continue to Payment"
-               />
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-android:layout_below="@+id/view3"
-               android:text="Total"
-               android:textColor="#000"
-               android:textStyle="bold"
-               android:id="@+id/total_text"
-               android:textSize="20dp"
-               android:layout_marginLeft="50sp"
-               android:layout_marginBottom="40sp"/>
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/totalcost"
-               android:layout_toRightOf="@+id/total_text"
-               android:text="Rs. 160"
-               android:textSize="20dp"
-               android:textColor="#000"
-               android:textStyle="bold"
-               android:gravity="end"
-               android:layout_marginRight="50dp"
-               android:layout_alignParentEnd="true"
-               android:layout_alignParentRight="true"
-               android:layout_marginBottom="40sp"
-               android:layout_below="@+id/view3"/>
-           <View
-               android:layout_width="match_parent"
-               android:layout_height="1dp"
-               android:background="@color/colorAccent"
-               android:layout_margin="4dp"
-android:layout_below="@+id/listView"
-               android:id="@+id/view3" />
-           <ListView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/listView"
-               android:layout_below="@+id/item_text">
+        <RelativeLayout
+            android:id="@+id/cart_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-           </ListView>
-       </RelativeLayout>
 
-   </LinearLayout>
+            <com.airbnb.lottie.LottieAnimationView xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                android:id="@+id/cart_view"
+
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/walkthrough" />
+
+            <TextView
+                android:id="@+id/empty_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cart_view"
+                android:layout_centerInParent="true"
+                android:text="Your Cart Is Empty"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/load_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_cart"
+                android:layout_centerInParent="true"
+                android:text="Load up your basket with some yummy food"
+                android:textColor="#000" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/load_cart"
+                android:layout_margin="15dp"
+                android:background="#FF0000"
+                android:text="Start shopping"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/display_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/cus_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="No Name"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/edit"
+
+                />
+
+            <TextView
+                android:id="@+id/add_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cus_name"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:text="Address Line 1"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/add_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_line1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:text="Address Details"
+                android:textColor="@color/colorAccent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/add_details"
+                android:layout_margin="4dp"
+                android:background="#504d4d" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="8dp"
+                android:layout_below="@+id/add_details"
+                android:layout_centerInParent="true"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/item_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:text="ITEM"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:text="QUantitiy"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_text"
+                android:layout_centerHorizontal="true"
+                android:background="#c23e16"
+                android:padding="20dp"
+                android:text="Continue to Payment" />
+
+            <TextView
+                android:id="@+id/total_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view3"
+                android:layout_marginBottom="40sp"
+                android:layout_marginLeft="50sp"
+                android:text="Total"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalcost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view3"
+                android:layout_marginBottom="40sp"
+                android:layout_marginRight="50dp"
+                android:layout_toRightOf="@+id/total_text"
+                android:gravity="end"
+                android:text="Rs. 160"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/listView"
+                android:layout_margin="4dp"
+                android:background="@color/colorAccent" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_text"
+                android:scrollbars="vertical">
+
+            </ListView>
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

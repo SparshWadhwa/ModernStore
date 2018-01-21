@@ -119,6 +119,7 @@ public class authentication extends AppCompatActivity {
                             Uid= user.getUid();
 
                             mPhnNo_databaseREference.child("users").child(Uid).child("phone no:").setValue(student_phnNo);
+                            mPhnNo_databaseREference.child("users").child(Uid).child("carttotal").setValue("0");
 
 
 //                            if (status == 1){
