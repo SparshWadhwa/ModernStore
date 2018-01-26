@@ -126,7 +126,9 @@ public class addAddressActivity extends AppCompatActivity {
                     if(!TextUtils.isEmpty(alternativePhnNo.getText().toString()))
                         mFirebaseDatabaseRef.child("alternativePhnNo").setValue(alternativePhnNo.getText().toString());
                     //=============eithr close this act or make intent to cart frag
-finish();
+                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                    intent.putExtra("fromCart" , true);
+                    startActivity(intent);
 
 
                 }
