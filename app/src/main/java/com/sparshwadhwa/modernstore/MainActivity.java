@@ -55,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        if(getIntent().getExtras()!=null)
+        {
+            boolean fromCart = getIntent().getExtras().getBoolean("fromCart");
+            if(fromCart)
+            {
+                getSupportFragmentManager().beginTransaction().replace(R.id.layout_main,new cart()).commit();
+            }
+
+
+        }
         }
 
     }

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_address_layout"
+    tools:context="com.sparshwadhwa.modernstore.addAddressActivity">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="31dp"
+        android:text="Add Address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enter_name"
+        android:layout_alignBottom="@+id/enter_name"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:text="Name : " />
+
+    <EditText
+        android:id="@+id/enter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView7"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Enter Your Full Name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_below="@+id/enter_name"
+        android:layout_marginTop="40dp"
+        android:text="Address Line 1: " />
+
+    <EditText
+        android:id="@+id/enter_address_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/enter_name"
+        android:layout_alignRight="@+id/enter_name"
+        android:layout_below="@+id/enter_name"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter Address"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_below="@+id/enter_address_line1"
+        android:layout_marginTop="15dp"
+        android:text="Address Line 2" />
+
+    <EditText
+        android:id="@+id/enter_address_line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enter_address_line1"
+        android:layout_alignStart="@+id/enter_address_line1"
+        android:layout_below="@+id/enter_address_line1"
+        android:ems="10"
+        android:hint="Enter Address Line 2"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/enter_address_line2"
+        android:layout_marginTop="11dp"
+        android:text="City : " />
+
+    <EditText
+        android:id="@+id/enter_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enter_address_line2"
+        android:layout_alignStart="@+id/enter_address_line2"
+        android:layout_below="@+id/enter_address_line2"
+        android:ems="10"
+        android:hint="Enter City"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_below="@+id/enter_city"
+        android:layout_marginTop="16dp"
+        android:text="State:" />
+
+    <EditText
+        android:id="@+id/enter_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enter_city"
+        android:layout_alignStart="@+id/enter_city"
+        android:layout_below="@+id/enter_city"
+        android:ems="10"
+        android:hint="Enter State"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:layout_below="@+id/enter_state"
+        android:layout_marginTop="30dp"
+        android:text="Alternative Phone Number :" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_below="@+id/textView13"
+        android:text="(Optional)" />
+
+    <EditText
+        android:id="@+id/enter_alternative_PhnNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enter_address_line1"
+        android:layout_alignStart="@+id/enter_address_line1"
+        android:layout_below="@+id/textView13"
+        android:ems="10"
+        android:hint="Alternative Phn No."
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/save_addressButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enter_alternative_PhnNo"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_toRightOf="@+id/textView9"
+        android:text="Save" />
+
+</RelativeLayout>

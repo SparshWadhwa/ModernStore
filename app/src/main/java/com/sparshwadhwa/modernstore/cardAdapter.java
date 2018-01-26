@@ -33,6 +33,7 @@ public class cardAdapter extends RecyclerView.Adapter<cardAdapter.MyViewHolder> 
     private  ClickListener clicklistener = null;
     private Context mContext;
     private DatabaseReference genreItemDatabaseRef;
+
     CardView card;
     public cardAdapter(Context context,LayoutInflater laf,List<String> myDataset){
         this.laf=laf;

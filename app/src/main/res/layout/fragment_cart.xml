@@ -1,73 +1,74 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cart_Fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sparshwadhwa.modernstore.cart">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.sparshwadhwa.modernstore.cart"
+    android:id="@+id/loop">
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/cart_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/cart_layout"
             android:orientation="vertical">
 
 
-            <com.airbnb.lottie.LottieAnimationView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <com.airbnb.lottie.LottieAnimationView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
 
-                android:id="@+id/cart_view"
+            android:id="@+id/cart_view"
 
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_centerHorizontal="true"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="false"
-                app:lottie_rawRes="@raw/walkthrough" />
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="250dp"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/walkthrough"
+            />
 
             <TextView
-                android:id="@+id/empty_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cart_view"
-                android:layout_centerInParent="true"
                 android:text="Your Cart Is Empty"
                 android:textColor="#000"
+                android:textStyle="bold"
                 android:textSize="20dp"
-                android:textStyle="bold" />
-
+                android:layout_centerInParent="true"
+                android:layout_below="@id/cart_view"
+                android:id="@+id/empty_cart"
+                />
             <TextView
-                android:id="@+id/load_cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/empty_cart"
-                android:layout_centerInParent="true"
                 android:text="Load up your basket with some yummy food"
-                android:textColor="#000" />
+                android:textColor="#000"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/empty_cart"
+                android:id="@+id/load_cart"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/load_cart"
-                android:layout_margin="15dp"
-                android:background="#FF0000"
                 android:text="Start shopping"
                 android:textColor="#fff"
-                android:textStyle="bold" />
+                android:background="#FF0000"
+               android:layout_below="@id/load_cart"
+                android:layout_margin="15dp"
+                android:textStyle="bold"
+               />
 
 
         </RelativeLayout>
-
-
         <RelativeLayout
-            android:id="@+id/display_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone">
-
+            android:id="@+id/middle_one">
             <TextView
                 android:id="@+id/cus_name"
                 android:layout_width="wrap_content"
@@ -87,6 +88,7 @@
                 android:layout_margin="10dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/edit"
+                android:id="@+id/add_address"
 
                 />
 
@@ -152,6 +154,19 @@
                 android:textColor="#000"
                 android:textStyle="bold" />
 
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/display_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+
+
             <Button
                 android:id="@+id/payment"
                 android:layout_width="wrap_content"
@@ -201,12 +216,12 @@
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/item_text"
+                android:layout_height="fill_parent"
                 android:scrollbars="vertical">
 
             </ListView>
         </RelativeLayout>
+        </ScrollView>
 
     </LinearLayout>
 
